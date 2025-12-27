@@ -77,10 +77,23 @@ h1,h2,h3{font-family:'Playfair Display',serif;}
 
 /* ---------- CHUTNEY EXPERIENCE ---------- */
 .chutney-bg{
+  position:relative;
   background:url("texture.png") repeat;
-  background-size:420px; /* adjust if needed */
+  background-size:420px;
 }
 
+.chutney-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(246,241,233,0.90);
+  pointer-events:none;
+}
+
+.chutney-bg > *{
+  position:relative;
+  z-index:1;
+}
 .chutney-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -99,11 +112,24 @@ h1,h2,h3{font-family:'Playfair Display',serif;}
 
 /* ---------- HOW IT IS EATEN (TEXTURE VISIBLE) ---------- */
 .how{
+  position:relative;
   background:url("texture.png") repeat;
-  background-size:420px; /* same size for consistency */
+  background-size:420px;
   color:var(--dark);
 }
 
+.how::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(246,241,233,0.90);
+  pointer-events:none;
+}
+
+.how > *{
+  position:relative;
+  z-index:1;
+}
   
 .steps p{
   font-size:20px;
