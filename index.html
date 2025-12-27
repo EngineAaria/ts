@@ -78,10 +78,13 @@ h1,h2,h3{font-family:'Playfair Display',serif;}
 /* ---------- CHUTNEY EXPERIENCE ---------- */
 .chutney-bg{
   background:
-    linear-gradient(to bottom,rgba(246,241,233,.88),rgba(246,241,233,.92)),
-    url("https://images.unsplash.com/photo-1541542684-4a93b8e1f32a");
-  background-size:cover;
-  background-position:center;
+    linear-gradient(
+      rgba(246,241,233,0.94),
+      rgba(246,241,233,0.94)
+    ),
+    url("texture.png");
+  background-repeat:repeat;
+  background-size:600px;
 }
 
 .chutney-grid{
@@ -100,11 +103,19 @@ h1,h2,h3{font-family:'Playfair Display',serif;}
   border-left-width:4px;
 }
 
-/* ---------- HOW IT IS EATEN (LIGHT) ---------- */
+/* ---------- HOW IT IS EATEN (TEXTURED LIGHT) ---------- */
 .how{
-  background:var(--light);
+  background:
+    linear-gradient(
+      rgba(246,241,233,0.96),
+      rgba(246,241,233,0.96)
+    ),
+    url("texture.png");
+  background-repeat:repeat;
+  background-size:600px;
   color:var(--dark);
 }
+  
 .steps p{
   font-size:20px;
   margin-bottom:18px;
