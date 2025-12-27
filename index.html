@@ -79,7 +79,7 @@ h1,h2,h3{font-family:'Playfair Display',serif;}
 .chutney-bg{
   position:relative;
   background:url("texture.png") repeat;
-  background-size:420px;
+  background-size:360px;
 }
 
 .chutney-bg::before{
@@ -111,18 +111,25 @@ h1,h2,h3{font-family:'Playfair Display',serif;}
   border-left-width:4px;
 }
 
-/* ---------- HOW IT IS EATEN (TEXTURED LIGHT) ---------- */
-/* ---------- HOW IT IS EATEN (VISIBLE TEXTURE) ---------- */
+/* ---------- HOW IT IS EATEN (TEXTURE VISIBLE) ---------- */
 .how{
-  background:
-    linear-gradient(
-      rgba(246,241,233,0.85),
-      rgba(246,241,233,0.85)
-    ),
-    url("texture.png");
-  background-repeat:repeat;
-  background-size:520px;
+  position:relative;
+  background:url("texture.png") repeat;
+  background-size:360px;
   color:var(--dark);
+}
+
+.how::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(246,241,233,0.80);
+  pointer-events:none;
+}
+
+.how > *{
+  position:relative;
+  z-index:1;
 }
   
 .steps p{
